@@ -18,7 +18,7 @@ from cldm.ddim_hacked import DDIMSampler
 apply_hed = HEDdetector()
 
 model = create_model('./models/cldm_v15.yaml').cpu()
-model.load_state_dict(load_state_dict('https://huggingface.co/lllyasviel/ControlNet/resolve/main/models/control_sd15_hed.pth', location='cuda'), strict=False)
+model.load_state_dict(load_state_dict('/content/ControlNet/control_sd15_hed.pth', location='cuda'), strict=False)
 model = model.cuda()
 ddim_sampler = DDIMSampler(model)
 
